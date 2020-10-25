@@ -8,11 +8,242 @@
     <author>
       <name>XYH</name>
     </author>
-    <updated>2020-04-12T12:46:25.000Z</updated>
+    <updated>2020-10-25T13:37:29.000Z</updated>
     <entry>
-        <id>http://www.xieyihui.top/2020/04/12/SSH/week-1/</id>
-        <title>第1周 Oracle数据类型、ROWNUM实现分页查询</title>
-        <link rel="alternate" href="http://www.xieyihui.top/2020/04/12/SSH/week-1/"/>
+        <id>http://www.xieyihui.top/2020/10/25/computer-science/SSH/week-2/</id>
+        <title>第2周 使用SQL语句操作表</title>
+        <link rel="alternate" href="http://www.xieyihui.top/2020/10/25/computer-science/SSH/week-2/"/>
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;p&gt;:::note info&lt;br /&gt;
+ 以下为个人学习笔记和习题整理&lt;br /&gt;
+:::&lt;/p&gt;
+&lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
+&lt;h3 id=&#34;创建表的命令-插入记录-更改记录-删除记录的命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建表的命令-插入记录-更改记录-删除记录的命令&#34;&gt;#&lt;/a&gt; 创建表的命令、插入记录、更改记录、删除记录的命令&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;创建表的命令&lt;br /&gt;
+&lt;strong&gt;命令格式：&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;create table 表名
+(字段名1  类型  约束(可选)， 
+字段名2  类型 约束(可选)，
+...
+字段名n 类型 约束(可选)
+);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;插入记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;命令格式 1：&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;insert into 表名 values(字段1的值,字段2的值,...,字段n的值);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;命令格式 2：&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;insert into table_name(列1,列2,...) values(值1,值2,....)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;更改记录&lt;br /&gt;
+&lt;strong&gt;命令格式：&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;update 表名
+set 列名=值
+where 筛选条件;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;清空表中的所有记录&lt;br /&gt;
+&lt;strong&gt;命令格式：&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;truncate  table  表名
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;查询关键字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查询关键字&#34;&gt;#&lt;/a&gt; 查询关键字&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;排序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;降序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Order by 排序字段  desc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;升序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Order by 排序字段  asc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;不选择重复行&lt;br /&gt;
+&lt;strong&gt; Distinct&lt;/strong&gt;&lt;br /&gt;
+ 说明：重复的结果只显示 1 次&lt;/li&gt;
+&lt;li&gt;筛选条件&lt;br /&gt;
+&lt;strong&gt; where&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt; 命令格式：&lt;/strong&gt;&lt;pre&gt;&lt;code&gt;select 字段1,....
+from 表名
+where  筛选条件;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;列取别名&lt;br /&gt;
+&lt;strong&gt;命令格式 1：&lt;/strong&gt;&lt;pre&gt;&lt;code&gt;select 列名 as 别名 
+from...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;命令格式 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select 列名 别名 
+from...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;从 select 结果创建新表&lt;br /&gt;
+&lt;strong&gt;命令格式：&lt;/strong&gt;&lt;pre&gt;&lt;code&gt;create table 表名
+as
+select ....
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sql操作符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sql操作符&#34;&gt;#&lt;/a&gt; SQL 操作符&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;算数操作符&lt;br /&gt;
+种类：+  -  *  /&lt;br /&gt;
+ 功能：number 类型的列，可使用算数操作符进行运算&lt;/li&gt;
+&lt;li&gt;比较操作符&lt;br /&gt;
+功能：对两个表达式的值进行比较&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;种类&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;等于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;!=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;不等于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;小于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大于等于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;=&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;小于等于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;IN (值 1, 值 2,...)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;与列表中的值匹配&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;LIKE&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;字符匹配模式。匹配符 %：任意个字符。 匹配符？: 一个字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;IS NULL&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;判断字段值为空&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;逻辑运算符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;运算符&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;用法&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;AND&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Where 条件 A  and 条件 B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;OR&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Where 条件 A  or 条件 B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;NOT&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Where not 条件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;集合运算符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;运算符&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;用法&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Union&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;联合&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Union All&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;联合所有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Intersect&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;交集&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Minus&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;减集&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Minus 差集&lt;br /&gt;
+&lt;strong&gt;命令格式：&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;select  ..  from  表           --结果A
+minus
+select  ..  from  表  			 --结果B
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;说明：A-B&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/ssh_picture/7.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ 举例：&lt;br /&gt;
+说明：employee 表中存放了在职和已退休员工的工号 (empno)，retireEmp 存放了已退休员工的工号 (rempno)。&lt;br /&gt;
+要求：仅查询在职员工的工号&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SELECT empno FROM emp  
+MINUS
+SELECT rempno FROM retireEmp;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;字符串连接符&lt;br /&gt;
+说明：用于将两个字符串 合并成一个 新字符串&lt;br /&gt;
+&lt;strong&gt;命令格式：&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;  列A || 列B
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="计算机科学" scheme="http://www.xieyihui.top/categories/computer-science/" />
+        <category term="SSH轻量级框架" scheme="http://www.xieyihui.top/categories/computer-science/SSH/" />
+        <updated>2020-10-25T13:37:29.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://www.xieyihui.top/2020/10/25/computer-science/SSH/week-1/</id>
+        <title>第1周 Oracle数据类型、约束、ROWNUM实现分页查询</title>
+        <link rel="alternate" href="http://www.xieyihui.top/2020/10/25/computer-science/SSH/week-1/"/>
         <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;p&gt;:::note info&lt;br /&gt;
  以下为个人学习笔记和习题整理&lt;br /&gt;
 :::&lt;/p&gt;
@@ -25,10 +256,152 @@
 &lt;li&gt;字符类型&lt;br /&gt;
 （1）以固定长度存放字符串：CHAR (n)、NCHAR (n)&lt;br /&gt;
  说明：CHAR (10)，存一个字符串 ’abc’&lt;br /&gt;
-&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/ssh_picture/1.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/ssh_picture/1.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+区别：NCHAR 以 UNICODE 存储每个字符&lt;br /&gt;
+ n 的最大取值：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/ssh_picture/2.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+（2）以可变长度存储字符串  VARCHAR2 (n)、NVARCHAR2 (n)&lt;br /&gt;
+ 说明：VARCHAR2 (10)，存一个字符串’abc’&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/ssh_picture/3.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+区别：NVARCHAR2 以 UNICODE 编码存储每个字符&lt;br /&gt;
+ n 的最大取值：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/ssh_picture/4.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;数值型&lt;br /&gt;
+从输入的数值划分：整数、小数&lt;br /&gt;
+（1）NUMBER 类型&lt;br /&gt;
+ a. 表示小数&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/ssh_picture/5.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+举例： NUMBER (5,2)，总共 5 个有效数字，小数点后保留 2 位，例如：123.45&lt;br /&gt;
+b. 表示整数 NUMBER (P)&lt;br /&gt;
+ 举例：NUMBER (5)，5 位数的整数&lt;/li&gt;
+&lt;li&gt;日期型&lt;br /&gt;
+（1）DATE 型&lt;br /&gt;
+格式：YYYY-MM-DD HH:MM:SS&lt;br /&gt;
+ 精确程度：秒&lt;br /&gt;
+（2）TIMESTAMP&lt;br /&gt;
+ 精确程度：0.000001 秒&lt;br /&gt;
+但使用较少&lt;/li&gt;
+&lt;li&gt;大对象类型（Large OBject）&lt;br /&gt;
+（1）BLOB 类型 (Binary Large OBject)&lt;br /&gt;
+ 以二进制形式存储&lt;br /&gt;
+举例：图片、音频、视频&lt;br /&gt;
+最大存储 4G 字节&lt;br /&gt;
+（2）CLOB 类型 (Character Large Object)&lt;br /&gt;
+ 以字符串形式存储&lt;br /&gt;
+举例：简历、新闻、文章&lt;br /&gt;
+最大存储 4G 字节&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;数据类型总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据类型总结&#34;&gt;#&lt;/a&gt; 数据类型总结&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;数据&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;应采用的类型&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;字符串&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Nvarchar2、varchar2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数值型&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;日期型&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Date&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;图片、音频、视频&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;BLOB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;超过千字的文本&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CLOB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;约束&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#约束&#34;&gt;#&lt;/a&gt; 约束&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;6 种常用约束&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;约束&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;关键字&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;主键约束&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;primary key&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;外键约束&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;foreign key&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;非空约束&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;not null&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;唯一值约束&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;unique&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;默认约束&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;default  ‘默认值’&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Check 约束&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;举例：check (gender=&#39; 男 &#39; or gender=&#39; 女 &#39;);&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;2 个添加约束的时机&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（1）创建时添加约束&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;create table 表名 
+(列名1 数值类型1 约束1,
+列名2 数值类型2 约束2
+);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;（2）创建表之后，使用 alter table 命令&lt;br /&gt;
+添加主键约束&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;ALTER TABLE 表名
+ADD CONSTRAINT 主键名 PRIMARY KEY (主键列);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;添加外键约束&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ALTER TABLE 表名
+ADD CONSTRAINT 外键名 Foreign Key(从表的外键列) References 主表名(主表的主键列);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;使用 PL/SQL Developer 图形界面添加约束&lt;/strong&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/ssh_picture/6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;rowid和rownum&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rowid和rownum&#34;&gt;#&lt;/a&gt; ROWID 和 ROWNUM&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ROWID&lt;br /&gt;
+ 说明：RowID 可以理解为 Oracle 为每一张表添加的一个隐藏列。&lt;br /&gt;
+表中的每一行（记录），都有一个行地址，ROWID 用于查询该行地址。&lt;br /&gt;
+任意两行的 ROWID 不同。&lt;br /&gt;
+ROWID 只能查询，不能修改、删除。&lt;/li&gt;
+&lt;li&gt;ROWNUM&lt;br /&gt;
+ 说明：对于查询结果表，rownum 能返回每一行在结果表的序号。&lt;br /&gt;
+结果表中的第一行 rownum 为 1、第 n 行 rownum 为 n。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rownum实现分页查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rownum实现分页查询&#34;&gt;#&lt;/a&gt; Rownum 实现分页查询&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;功能：从表 X 中，查出按字段 F 排序后的 第 M 到第 N 条记录&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;命令公式：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select * from
+(select e.*, rownum rn from
+(select * from 表X order by 字段F 排序方式) e)
+where rn&amp;gt;=M and rn&amp;lt;=N;
+&lt;/code&gt;&lt;/pre&gt;
 </content>
-        <category term="SSH轻量级框架" scheme="http://www.xieyihui.top/categories/SSH/" />
-        <updated>2020-04-12T12:46:25.000Z</updated>
+        <category term="计算机科学" scheme="http://www.xieyihui.top/categories/computer-science/" />
+        <category term="SSH轻量级框架" scheme="http://www.xieyihui.top/categories/computer-science/SSH/" />
+        <updated>2020-10-25T13:07:25.000Z</updated>
     </entry>
 </feed>
