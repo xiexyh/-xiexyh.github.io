@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "XYH",
+    "subtitle": "",
+    "icon": "http://www.xieyihui.top/images/favicon.ico",
+    "description": "",
+    "home_page_url": "http://www.xieyihui.top",
+    "items": [
+        {
+            "id": "http://www.xieyihui.top/2020/04/12/SSH/week-1/",
+            "url": "http://www.xieyihui.top/2020/04/12/SSH/week-1/",
+            "title": "第1周 Oracle数据类型、ROWNUM实现分页查询",
+            "date_published": "2020-04-12T12:46:25.000Z",
+            "content_html": "<link rel=\"stylesheet\" class=\"aplayer-secondary-style-marker\" href=\"\\assets\\css\\APlayer.min.css\"><script src=\"\\assets\\js\\APlayer.min.js\" class=\"aplayer-secondary-script-marker\"></script><p>:::note info<br />\n 以下为个人学习笔记和习题整理<br />\n:::</p>\n<h1 id=\"课堂笔记\"><a class=\"anchor\" href=\"#课堂笔记\">#</a> 课堂笔记</h1>\n<h2 id=\"oracle-11g-安装\"><a class=\"anchor\" href=\"#oracle-11g-安装\">#</a> Oracle 11g 安装</h2>\n<p>超详细的安装教程：<span class=\"exturl\" data-url=\"aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpZGFwYW5nMTIzL2FydGljbGUvZGV0YWlscy84ODkyODAzNQ==\">https://blog.csdn.net/lidapang123/article/details/88928035</span></p>\n<h2 id=\"oracle中的数据类型\"><a class=\"anchor\" href=\"#oracle中的数据类型\">#</a> Oracle 中的数据类型</h2>\n<p><strong>Oracle 中的数据类型：字符型、数值型、日期型、LOB 类型（BLOB、CLOB）</strong></p>\n<ul>\n<li>字符类型<br />\n（1）以固定长度存放字符串：CHAR (n)、NCHAR (n)<br />\n 说明：CHAR (10)，存一个字符串 ’abc’<br />\n<img data-src=\"https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/ssh_picture/1.png\" alt=\"\" /></li>\n</ul>\n",
+            "tags": [
+                "SSH轻量级框架"
+            ]
+        }
+    ]
+}
