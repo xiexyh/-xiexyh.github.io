@@ -152,9 +152,9 @@
 &lt;p&gt;背景：Oracle 中，NULL + 任意数，结果都为 NULL&lt;br /&gt;
  这种情况与实际情况相违背。为了解决这个问题，Oracle 提供了滤空函数。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;nvl (表达示一，表达式二)&lt;br /&gt;
+&lt;li&gt;&lt;strong&gt;nvl (表达示一，表达式二)&lt;/strong&gt;&lt;br /&gt;
  功能：一空，则返回二。&lt;/li&gt;
-&lt;li&gt;nvl2 (表达式一，表达式二，表达式三)&lt;br /&gt;
+&lt;li&gt;&lt;strong&gt;nvl2 (表达式一，表达式二，表达式三)&lt;/strong&gt;&lt;br /&gt;
  功能：一空，则返回三；否则返回二。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;转换器函数-decode&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#转换器函数-decode&#34;&gt;#&lt;/a&gt; 转换器函数 decode&lt;/h3&gt;
