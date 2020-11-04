@@ -141,15 +141,15 @@ inverse 取值为 &lt;code&gt;true&lt;/code&gt; ，代表放弃了外键维护�
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;class 标签 lazy= &amp;quot;true&amp;quot;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;class 标签中设置 lazy= &amp;quot;true&amp;quot;&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;true 延迟加载&lt;br&gt;false 立即加载&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;set 标签 lazy =&amp;quot;true&amp;quot;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;set 标签中设置 lazy =&amp;quot;true&amp;quot;&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;true 延迟加载&lt;br&gt;extra 增强延迟加载&lt;br&gt;false 立即加载&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;many-to-one 标签 lazy =&amp;quot;proxy&amp;quot;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;many-to-one 标签中设置 lazy =&amp;quot;proxy&amp;quot;&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;proxy 延迟加载&lt;br&gt;no-proxy 无代理延迟加载&lt;br&gt;false 立即加载&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
