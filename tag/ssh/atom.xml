@@ -138,8 +138,8 @@ Java 程序要生成主键值，Hibernate 不生成主键值。（默认方式�
 &lt;li&gt;&lt;strong&gt;刷新缓存&lt;/strong&gt;&lt;br /&gt;
 含义：用 session 缓存中的对象属性，去更新数据库&lt;br /&gt;
 何时发生：&lt;br /&gt;
-(1) session.flush()&lt;br /&gt;
-(2)transaction.commit()&lt;/li&gt;
+(1) &lt;code&gt;session.flush()&lt;/code&gt; &lt;br /&gt;
+(2) &lt;code&gt;transaction.commit()&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;hibernate-api更新数据&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hibernate-api更新数据&#34;&gt;#&lt;/a&gt; Hibernate API 更新数据&lt;/h2&gt;
 &lt;p&gt;更新数据的 &lt;code&gt;三种&lt;/code&gt; 方法：&lt;/p&gt;
@@ -155,16 +155,18 @@ Java 程序要生成主键值，Hibernate 不生成主键值。（默认方式�
  当传入的是瞬时对象，则将该瞬时对象插入数据库，同时返回持久态的该对象。&lt;br /&gt;
 当传入的是游离态对象，则根据该对象更新数据库，同时返回持久态的该对象。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;merge 与 save 方法的比较&lt;/strong&gt;&lt;br /&gt;
- i. 相同点： 都是将 new 出来的对象 保存到表中&lt;br /&gt;
- ii. 不同点：merge 保存后会返回该 PO 对象，而 save 不能返回该 PO 对象。&lt;br /&gt;
-&lt;strong&gt;merge 与 update 方法的比较&lt;/strong&gt;&lt;br /&gt;
- i. 相同点：都是用游离态的对象去 更新表中的记录&lt;br /&gt;
- ii. 不同点：merge 更新后会返回该 PO 对象，而 update 返回 void 值。&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;merge 与 save 方法的比较&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;相同点： 都是将 new 出来的对象 保存到表中&lt;/li&gt;
+&lt;li&gt;不同点：merge 保存后会返回该 PO 对象，而 save 不能返回该 PO 对象。&lt;br /&gt;
+&lt;strong&gt;merge 与 update 方法的比较&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;相同点：都是用游离态的对象去 更新表中的记录&lt;/li&gt;
+&lt;li&gt;不同点：merge 更新后会返回该 PO 对象，而 update 返回 void 值。&lt;br /&gt;
 &lt;strong&gt;总结：&lt;/strong&gt;&lt;br /&gt;
 存入用 &lt;code&gt;save&lt;/code&gt; &lt;br /&gt;
  更新用 &lt;code&gt;update&lt;/code&gt; &lt;br /&gt;
- 如果存入、更新后还要使用该 PO 对象，则使用 &lt;code&gt;merge&lt;/code&gt;&lt;/p&gt;
+ 如果存入、更新后还要使用该 PO 对象，则使用 &lt;code&gt;merge&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
         <category term="计算机科学" scheme="http://www.xieyihui.top/categories/computer-science/" />
         <category term="SSH轻量级框架" scheme="http://www.xieyihui.top/categories/computer-science/SSH/" />
