@@ -81,8 +81,10 @@
 &lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; 分组依据&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; 聚合函数&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;列&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; 表 &lt;span class=&#34;token keyword&#34;&gt;group&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;by&lt;/span&gt; 分组依据 &lt;span class=&#34;token keyword&#34;&gt;having&lt;/span&gt; 聚合函数&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;列&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; …&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;hibernate连接查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hibernate连接查询&#34;&gt;#&lt;/a&gt; Hibernate 连接查询&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;内连接查询&lt;/strong&gt;&lt;br /&gt;
- ** 前提：** 已经在两个类的映射文件中 建立了关联映射。 （手动、或 Hibernate 反向工程均可）&lt;br /&gt;
-** 要点：** 只要  A 对象 有一个元素为 Set&lt;B&gt;属性，就可以通过下述语句查询到 Set&lt;B&gt; 对应的所有记录。&lt;/li&gt;
+&lt;strong&gt;前提：&lt;/strong&gt;&lt;br /&gt;
+已经在两个类的映射文件中建立了关联映射。（手动、或 Hibernate 反向工程均可）&lt;br /&gt;
+&lt;strong&gt;要点：&lt;/strong&gt;&lt;br /&gt;
+只要 A 对象有一个元素为 Set&lt;B&gt;属性，就可以通过下述语句查询到 Set&lt;B&gt; 对应的所有记录。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;from 类 A 别名 inner join fetch 别名.Set 属性名&lt;/p&gt;
@@ -90,7 +92,7 @@
 &lt;p&gt;&lt;span class=&#34;red&#34;&gt;注意：&lt;/span&gt;&lt;br /&gt;
 （1）类名后必须取别名&lt;br /&gt;
 （2）join 后如果没有 fetch 关键字，则返回的结果不是 类的对象，而是 Object []&lt;br /&gt;
-（3）别名。属性名 表示 要连接的表&lt;/p&gt;
+（3）别名。属性名 表示要连接的表&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;左外连接查询&lt;/strong&gt;&lt;br /&gt;
 &lt;strong&gt;语法：&lt;/strong&gt;&lt;/li&gt;
