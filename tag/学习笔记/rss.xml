@@ -10,8 +10,269 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Wed, 11 Nov 2020 17:30:40 +0800</pubDate>
-        <lastBuildDate>Wed, 11 Nov 2020 17:30:40 +0800</lastBuildDate>
+        <pubDate>Wed, 11 Nov 2020 21:52:22 +0800</pubDate>
+        <lastBuildDate>Wed, 11 Nov 2020 21:52:22 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://www.xieyihui.top/2020/11/11/computer-science/Big-data/week-6/</guid>
+            <title>第6周 Hbase常用操作命令</title>
+            <link>http://www.xieyihui.top/2020/11/11/computer-science/Big-data/week-6/</link>
+            <category term="计算机科学" scheme="http://www.xieyihui.top/categories/computer-science/" />
+            <category term="大数据技术原理与应用" scheme="http://www.xieyihui.top/categories/computer-science/Big-data/" />
+            <category term="大数据" scheme="http://www.xieyihui.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" />
+            <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+            <pubDate>Wed, 11 Nov 2020 21:52:22 +0800</pubDate>
+            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
+&lt;h2 id=&#34;检查hadoop集群环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检查hadoop集群环境&#34;&gt;#&lt;/a&gt; 检查 hadoop 集群环境&lt;/h2&gt;
+&lt;p&gt;hadoop1 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.11.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ hadoop2 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.12.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ hadoop3 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;检查hbase集群环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检查hbase集群环境&#34;&gt;#&lt;/a&gt; 检查 Hbase 集群环境&lt;/h2&gt;
+&lt;p&gt;hadoop1 运行 jps 命令的截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/5.7.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+hadoop2 运行 jps 命令的截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/5.8.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+hadoop3 运行 jps 命令的截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/5.9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;hbase基本操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hbase基本操作&#34;&gt;#&lt;/a&gt; Hbase 基本操作&lt;/h2&gt;
+&lt;h3 id=&#34;hbase-shell命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hbase-shell命令&#34;&gt;#&lt;/a&gt; Hbase Shell 命令&lt;/h3&gt;
+&lt;p&gt;在 hadoop1 主节点上进入 Hbase shell 模式&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hbase shell&lt;/code&gt; &lt;br /&gt;
+ 启动成功如下：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;显示hbase-shell-帮助文档&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#显示hbase-shell-帮助文档&#34;&gt;#&lt;/a&gt; 显示 HBase Shell 帮助文档&lt;/h3&gt;
+&lt;p&gt;输入 &lt;code&gt;help&lt;/code&gt;  并按 Enter 键，可以显示 HBase Shell 的基本使用信息&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;查看hbase状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查看hbase状态&#34;&gt;#&lt;/a&gt; 查看 Hbase 状态&lt;/h3&gt;
+&lt;p&gt;输入 &lt;code&gt;status&lt;/code&gt; ，可以查看 Hbase 的状态&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;退出hbase-shell&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#退出hbase-shell&#34;&gt;#&lt;/a&gt; 退出 HBase Shell&lt;/h3&gt;
+&lt;p&gt;使用 &lt;code&gt;quit&lt;/code&gt;  命令，退出 HBase Shell 并且断开和集群的连接&lt;/p&gt;
+&lt;h3 id=&#34;hbase数据定义ddl操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hbase数据定义ddl操作&#34;&gt;#&lt;/a&gt; hbase 数据定义（DDL）操作&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;创建新表&lt;/strong&gt;&lt;br /&gt;
+使用 create 命令来创建一个新的表。在创建的时候，必须指定表名和列族名。&lt;br /&gt;
+命令： &lt;code&gt;create &#39;user&#39;, &#39;info &#39;&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.4.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;列举表信息&lt;/strong&gt;&lt;br /&gt;
+使用 list 命令，列出所有的表信息&lt;br /&gt;
+命令： &lt;code&gt;list &#39;user&#39;&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.5.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;获取表描述&lt;/strong&gt;&lt;br /&gt;
+使用 describe 命令，显示表的相关信息&lt;br /&gt;
+命令： &lt;code&gt;describe &#39;user&#39;&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.6.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;检查表是否存在&lt;/strong&gt;&lt;br /&gt;
+使用 exists 命令，判断表是否存在&lt;br /&gt;
+命令： &lt;code&gt;exists &#39;user&#39;&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.7.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;删除表&lt;/strong&gt;&lt;br /&gt;
+删除表之前，先 disable 表，再使用 drop 命令实现删除表的功能&lt;br /&gt;
+命令： &lt;code&gt;drop &#39;user&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.8.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据管理dml操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据管理dml操作&#34;&gt;#&lt;/a&gt; 数据管理（DML）操作&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;向表中插入数据&lt;/strong&gt;&lt;br /&gt;
+使用 put 命令，将数据插入表中&lt;br /&gt;
+命令： &lt;code&gt;put &#39;user&#39;, &#39;row1&#39;, &#39;info:a&#39;, &#39;value1&#39;&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.9.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一次性扫描全表数据&lt;/strong&gt;&lt;br /&gt;
+一种获取 HBase 数据的方法是扫描，使用 scan 命令来扫描表的数据。（可以限制扫描的范围）&lt;br /&gt;
+命令： &lt;code&gt;scan &#39;user&#39;&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.10.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;获取一个行数据&lt;/strong&gt;&lt;br /&gt;
+使用 get 命令来获得某一行的数据&lt;br /&gt;
+命令： &lt;code&gt;get &#39;user&#39;, &#39;row1&#39;&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.11.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;禁用一个表&lt;/strong&gt;&lt;br /&gt;
+如果你想要删除一个表或是修改它的设置，或者是其它的情况，都需要首先禁用该表。使用 disable 命令禁用表，enable 命令重新启用表。&lt;br /&gt;
+禁用表命令： &lt;code&gt;disable &#39;user&#39;&lt;/code&gt; &lt;br /&gt;
+ 重新启用表命令： &lt;code&gt;enable &#39;user&#39;&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.12.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;删除数据&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;删除行中的某个列值&lt;br /&gt;
+语法： &lt;code&gt;delete &amp;lt;table&amp;gt;, &amp;lt;rowkey&amp;gt;,  &amp;lt;family:column&amp;gt; , &amp;lt;timestamp&amp;gt;&lt;/code&gt; &lt;br /&gt;
+ 命令： &lt;code&gt;delete &#39;user&#39;,&#39;rowkey001&#39;,&#39;info:a&#39;&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.13.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;删除行&lt;br /&gt;
+语法： &lt;code&gt;deleteall &amp;lt;table&amp;gt;, &amp;lt;rowkey&amp;gt;,  &amp;lt;family:column&amp;gt; , &amp;lt;timestamp&amp;gt;&lt;/code&gt; &lt;br /&gt;
+ 命令： &lt;code&gt;deleteall &#39;user&#39;,&#39;row1&#39;&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.14.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;删除表中的所有数据&lt;br /&gt;
+语法： &lt;code&gt;truncate &amp;lt;table&amp;gt;&lt;/code&gt; &lt;br /&gt;
+ 命令： &lt;code&gt;truncate &#39;user&#39;&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/6.15.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://www.xieyihui.top/2020/11/11/computer-science/Big-data/week-5/</guid>
+            <title>第5周 Hbase集群环境部署</title>
+            <link>http://www.xieyihui.top/2020/11/11/computer-science/Big-data/week-5/</link>
+            <category term="计算机科学" scheme="http://www.xieyihui.top/categories/computer-science/" />
+            <category term="大数据技术原理与应用" scheme="http://www.xieyihui.top/categories/computer-science/Big-data/" />
+            <category term="大数据" scheme="http://www.xieyihui.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" />
+            <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+            <pubDate>Wed, 11 Nov 2020 21:15:20 +0800</pubDate>
+            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
+&lt;h2 id=&#34;检查环境hadoop集群环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检查环境hadoop集群环境&#34;&gt;#&lt;/a&gt; 检查环境 hadoop 集群环境&lt;/h2&gt;
+&lt;p&gt;hadoop1 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.11.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ hadoop2 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.12.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ hadoop3 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装hbase集群&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装hbase集群&#34;&gt;#&lt;/a&gt; 安装 Hbase 集群&lt;/h2&gt;
+&lt;h3 id=&#34;准备软件包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#准备软件包&#34;&gt;#&lt;/a&gt; 准备软件包&lt;/h3&gt;
+&lt;p&gt;下载好&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2FyY2hpdmUuYXBhY2hlLm9yZy9kaXN0L2hiYXNlLzEuMi42Lw==&#34;&gt; hbase-1.2.6&lt;/span&gt; 的压缩包&lt;/p&gt;
+&lt;h3 id=&#34;进入软件包的目录解压安装压缩包将hbase安装包解压缩到opt目录下&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进入软件包的目录解压安装压缩包将hbase安装包解压缩到opt目录下&#34;&gt;#&lt;/a&gt; 进入软件包的目录解压安装压缩包将 hbase 安装包解压缩到 /opt 目录下&lt;/h3&gt;
+&lt;p&gt;在终端执行命令： &lt;code&gt;cd /opt/hadoop-package&lt;/code&gt; &lt;br /&gt;
+ 在终端执行命令： &lt;code&gt;tar -zxvf hbase-1.2.6-bin.tar.gz -C /opt&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/5.1.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ 解压完成截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/5.2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;重命名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#重命名&#34;&gt;#&lt;/a&gt; 重命名&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;进入 /opt 目录下&lt;/strong&gt;&lt;br /&gt;
+在终端执行命令： &lt;code&gt;cd /opt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重命名&lt;/strong&gt;&lt;br /&gt;
+在终端执行命令： &lt;code&gt;mv hbase-1.2.6 hbase&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;修改hbase-sitexml配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修改hbase-sitexml配置文件&#34;&gt;#&lt;/a&gt; 修改 hbase-site.xml 配置文件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;进入 conf 目录&lt;/strong&gt;&lt;br /&gt;
+在终端执行命令： &lt;code&gt;cd /opt/hbase/conf/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;修改 hbase-site.xml 文件&lt;/strong&gt;&lt;br /&gt;
+在终端执行命令： &lt;code&gt;vim hbase-site.xml&lt;/code&gt; &lt;br /&gt;
+ 在 &lt;code&gt;&amp;lt;configuration&amp;gt; &amp;lt;/configuration&amp;gt;&lt;/code&gt;  中间添加下面代码：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;property&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;name&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;hbase.rootdir&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;/name&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;value&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;hdfs://hadoop1:9000/hbase&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;/value&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;/property&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;property&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;name&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;hbase.cluster.distributed&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;/name&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;value&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;true&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;/value&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;/property&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;property&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;name&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;hbase.zookeeper.quorum&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;/name&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;value&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;hadoop1,hadoop2,hadoop&lt;span class=&#34;token operator&#34;&gt;&lt;span class=&#34;token file-descriptor important&#34;&gt;3&lt;/span&gt;&amp;lt;&lt;/span&gt;/value&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;/property&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;修改后的配置如下：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/5.3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;修改regionservers&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修改regionservers&#34;&gt;#&lt;/a&gt; 修改 regionservers&lt;/h3&gt;
+&lt;p&gt;在终端执行命令： &lt;code&gt;vim regionservers&lt;/code&gt; &lt;br /&gt;
+ 在 regionservers 配置文件中删除 localhost 后添加下面代码:&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hadoop2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hadoop3&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;修改后的配置如下：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/5.4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;修改hbase-envsh&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修改hbase-envsh&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3huLS1oYmFzZS1lbnYtejg5bno3OHAuc2g=&#34;&gt;修改 hbase-env.sh&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;在终端执行命令： &lt;code&gt;vim hbase-env.sh&lt;/code&gt; &lt;br /&gt;
+ 在第二行加入下面两行代码&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;/opt/jdk1.8.0_162/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;HBASE_MANAGES_ZK&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;false&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;修改好的配置截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/5.5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;将在配置文件同步到hadoop2和hadoop3上&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#将在配置文件同步到hadoop2和hadoop3上&#34;&gt;#&lt;/a&gt; 将在配置文件同步到 hadoop2 和 hadoop3 上&lt;/h3&gt;
+&lt;p&gt;同步到 hadoop2 上：&lt;br /&gt;
+在终端执行命令： &lt;code&gt;scp -r /opt/hbase/ hadoop2:/opt/&lt;/code&gt; &lt;br /&gt;
+ 同步到 hadoop3 上：&lt;br /&gt;
+在终端执行命令： &lt;code&gt;scp -r /opt/hbase/ hadoop3:/opt/&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;启动hbase集群&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动hbase集群&#34;&gt;#&lt;/a&gt; 启动 hbase 集群&lt;/h2&gt;
+&lt;h3 id=&#34;启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动&#34;&gt;#&lt;/a&gt; 启动&lt;/h3&gt;
+&lt;p&gt;在 hadoop1 上进入到 hbase 的 bin 目录&lt;br /&gt;
+在终端执行命令： &lt;code&gt;cd /opt/hbase/bin/&lt;/code&gt; &lt;br /&gt;
+ 启动 hbase&lt;br /&gt;
+ 在终端执行命令： &lt;code&gt;./start-hbase.sh&lt;/code&gt; &lt;br /&gt;
+ 启动过程：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/5.6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;检查是否成功&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检查是否成功&#34;&gt;#&lt;/a&gt; 检查是否成功&lt;/h3&gt;
+&lt;p&gt;hadoop1 运行 jps 命令的截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/5.7.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+hadoop2 运行 jps 命令的截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/5.8.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+hadoop3 运行 jps 命令的截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/5.9.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+至此，Hbase-1.2.6 已成功安装部署啦&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://www.xieyihui.top/2020/11/11/computer-science/Big-data/week-4/</guid>
+            <title>第4周 Zookeeper常用操作命令</title>
+            <link>http://www.xieyihui.top/2020/11/11/computer-science/Big-data/week-4/</link>
+            <category term="计算机科学" scheme="http://www.xieyihui.top/categories/computer-science/" />
+            <category term="大数据技术原理与应用" scheme="http://www.xieyihui.top/categories/computer-science/Big-data/" />
+            <category term="大数据" scheme="http://www.xieyihui.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" />
+            <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+            <pubDate>Wed, 11 Nov 2020 20:23:38 +0800</pubDate>
+            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
+&lt;h2 id=&#34;检查环境hadoop集群环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检查环境hadoop集群环境&#34;&gt;#&lt;/a&gt; 检查环境 hadoop 集群环境&lt;/h2&gt;
+&lt;p&gt;hadoop1 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.11.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ hadoop2 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.12.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ hadoop3 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;检查环境zookeeper集群环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检查环境zookeeper集群环境&#34;&gt;#&lt;/a&gt; 检查环境 zookeeper 集群环境&lt;/h2&gt;
+&lt;p&gt;在 hadoop1 查看 zookeeper 状态&lt;br /&gt;
+在终端执行命令： &lt;code&gt;zkServer.sh status&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/4.1.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ 在 hadoop2 查看 zookeeper 状态&lt;br /&gt;
+在终端执行命令： &lt;code&gt;zkServer.sh status&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/4.2.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ 在 hadoop3 查看 zookeeper 状态&lt;br /&gt;
+在终端执行命令： &lt;code&gt;zkServer.sh status&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/4.3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;zookeeper常见命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zookeeper常见命令&#34;&gt;#&lt;/a&gt; Zookeeper 常见命令&lt;/h2&gt;
+&lt;h3 id=&#34;打开客户端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#打开客户端&#34;&gt;#&lt;/a&gt; 打开客户端&lt;/h3&gt;
+&lt;p&gt;在终端执行命令：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3prQ2xpLnNo&#34;&gt;zkCli.sh&lt;/span&gt; -server hadoop1:2181&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/4.4.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ 成功连接的截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/4.5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;创建zookeeper节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建zookeeper节点&#34;&gt;#&lt;/a&gt; 创建 Zookeeper 节点&lt;/h3&gt;
+&lt;p&gt;使用 create 命令，可以创建一个 Zookeeeper 节点&lt;br /&gt;
+ &lt;code&gt;create [-s] [-e] path data acl&lt;/code&gt; &lt;br /&gt;
+ 其中，-s 或 - e 分别指定节点特性，顺序或临时节点，若不指定，则表示持久节点；acl 用来进行权限控制。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;创建顺序节点&lt;/strong&gt;&lt;br /&gt;
+使用 &lt;code&gt;create -s /zk-test 123&lt;/code&gt;  命令创建 zk-test 顺序节点&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/4.6.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;创建临时节点&lt;/strong&gt;&lt;br /&gt;
+使用 &lt;code&gt;create -e /zk-temp 123&lt;/code&gt;  命令创建 zk-temp 临时节点&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/4.7.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;创建永久节点&lt;/strong&gt;&lt;br /&gt;
+使用 &lt;code&gt;create /zk-permanent 123&lt;/code&gt;  命令创建 zk-permanent 永久节点&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/4.8.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;读取节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#读取节点&#34;&gt;#&lt;/a&gt; 读取节点&lt;/h3&gt;
+&lt;p&gt;与读取相关的命令有 ls 命令和 get 命令，ls 命令可以列出 Zookeeper 指定节点下的所有子节点，只能查看指定节点下的第一级的所有子节点；get 命令可以获取 Zookeeper 指定节点的数据内容和属性信息。&lt;br /&gt;
+用法：&lt;br /&gt;
+ &lt;code&gt;ls path [watch]&lt;/code&gt; &lt;br /&gt;
+ &lt;code&gt;get path [watch]&lt;/code&gt; &lt;br /&gt;
+ 如果想获取根节点下面的所有子节点，使用 &lt;code&gt;ls /&lt;/code&gt;  命令即可&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/4.9.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+如果想获取根节点数据内容和属性信息，使用 &lt;code&gt;get /&lt;/code&gt;  命令即可&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/4.10.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+如果想获取 /zk-permanent 的数据内容和属性，可使用 &lt;code&gt;get /zk-permanent&lt;/code&gt;  命令&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/4.11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;更新节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更新节点&#34;&gt;#&lt;/a&gt; 更新节点&lt;/h3&gt;
+&lt;p&gt;使用 set 命令，可以更新指定节点的数据内容&lt;br /&gt;
+用法： &lt;code&gt;set path data [version]&lt;/code&gt; &lt;br /&gt;
+ 其中，data 就是要更新的新内容，version 表示数据版本，&lt;br /&gt;
+如将 /zk-permanent 节点的数据更新为 456，可以使用如下命令： &lt;code&gt;set /zk-permanent 456&lt;/code&gt; &lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/4.12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;删除节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#删除节点&#34;&gt;#&lt;/a&gt; 删除节点&lt;/h3&gt;
+&lt;p&gt;使用 delete 命令可以删除 Zookeeper 上的指定节点&lt;br /&gt;
+用法： &lt;code&gt;delete path [version]&lt;/code&gt; &lt;br /&gt;
+ 其中 version 也是表示数据版本，使用 &lt;code&gt;delete /zk-permanent&lt;/code&gt;  命令即可删除 /zk-permanent 节点&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/4.13.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;span class=&#34;red&#34;&gt;注：&lt;/span&gt;&lt;br /&gt;
+若删除节点存在子节点，那么无法删除该节点，必须先删除子节点，再删除父节点。&lt;/p&gt;
+&lt;h3 id=&#34;退出客户端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#退出客户端&#34;&gt;#&lt;/a&gt; 退出客户端&lt;/h3&gt;
+&lt;p&gt;使用 &lt;code&gt;quit&lt;/code&gt;  命令退出客户端&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/4.14.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://www.xieyihui.top/2020/11/11/computer-science/Big-data/week-3/</guid>
             <title>第3周 Zookeeper集群环境部署</title>
@@ -22,10 +283,10 @@
             <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
             <pubDate>Wed, 11 Nov 2020 17:30:40 +0800</pubDate>
             <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以下为个人学习笔记和习题整理&lt;/p&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
-&lt;h2 id=&#34;检查环境hadop集群环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检查环境hadop集群环境&#34;&gt;#&lt;/a&gt; 检查环境 hadop 集群环境&lt;/h2&gt;
+&lt;h2 id=&#34;检查环境hadoop集群环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检查环境hadoop集群环境&#34;&gt;#&lt;/a&gt; 检查环境 hadoop 集群环境&lt;/h2&gt;
 &lt;p&gt;hadoop1 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
 &lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.11.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
  hadoop2 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
@@ -34,7 +295,7 @@
 &lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;安装zookeeper集群&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装zookeeper集群&#34;&gt;#&lt;/a&gt; 安装 Zookeeper 集群&lt;/h2&gt;
 &lt;h3 id=&#34;软件包准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件包准备&#34;&gt;#&lt;/a&gt; 软件包准备&lt;/h3&gt;
-&lt;p&gt;下载好&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2FyY2hpdmUuYXBhY2hlLm9yZy9kaXN0L3pvb2tlZXBlci96b29rZWVwZXItMy40LjEwLw==&#34;&gt; zookeeper-3.4.10&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;下载好&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2FyY2hpdmUuYXBhY2hlLm9yZy9kaXN0L3pvb2tlZXBlci96b29rZWVwZXItMy40LjEwLw==&#34;&gt; zookeeper-3.4.10&lt;/span&gt; 的&lt;/p&gt;
 &lt;h3 id=&#34;进入软件包的目录下解压安装压缩包将zookeeper安装包解压缩到opt目录下&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进入软件包的目录下解压安装压缩包将zookeeper安装包解压缩到opt目录下&#34;&gt;#&lt;/a&gt; 进入软件包的目录下解压安装压缩包将 zookeeper 安装包解压缩到 /opt 目录下&lt;/h3&gt;
 &lt;p&gt;在终端执行命令： &lt;code&gt;cd /opt/hadoop-package&lt;/code&gt; &lt;br /&gt;
  在终端执行命令： &lt;code&gt;tar -zxvf zookeeper-3.4.10.tar.gz -C /opt/&lt;/code&gt; &lt;br /&gt;
@@ -106,10 +367,10 @@
             <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
             <pubDate>Wed, 11 Nov 2020 16:46:58 +0800</pubDate>
             <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以下为个人学习笔记和习题整理&lt;/p&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
-&lt;h2 id=&#34;检查环境hadop集群环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检查环境hadop集群环境&#34;&gt;#&lt;/a&gt; 检查环境 hadop 集群环境&lt;/h2&gt;
+&lt;h2 id=&#34;检查环境hadoop集群环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检查环境hadoop集群环境&#34;&gt;#&lt;/a&gt; 检查环境 hadoop 集群环境&lt;/h2&gt;
 &lt;p&gt;hadoop1 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
 &lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.11.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
  hadoop2 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
@@ -213,7 +474,7 @@
 &lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;查看具体文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查看具体文件&#34;&gt;#&lt;/a&gt; 查看具体文件&lt;/h3&gt;
 &lt;p&gt;功能：查看文件内容&lt;br /&gt;
-操作 1：查看 stu1 文件夹下的 iris.data 文件的内容&lt;br /&gt;
+操作：查看 stu1 文件夹下的 iris.data 文件的内容&lt;br /&gt;
 在终端执行命令： &lt;code&gt;hdfs dfs -cat /stu1/iris.data&lt;/code&gt; &lt;br /&gt;
  操作执行截图：&lt;br /&gt;
 &lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -416,7 +677,7 @@
             <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
             <pubDate>Sat, 07 Nov 2020 15:23:43 +0800</pubDate>
             <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以下为个人学习笔记和习题整理&lt;/p&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
 &lt;h2 id=&#34;hibernate使用sql语句&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hibernate使用sql语句&#34;&gt;#&lt;/a&gt; Hibernate 使用 SQL 语句&lt;/h2&gt;
@@ -618,7 +879,7 @@
             <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
             <pubDate>Wed, 04 Nov 2020 21:05:18 +0800</pubDate>
             <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以下为个人学习笔记和习题整理&lt;/p&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
 &lt;p&gt;数据库设计中，两个实体之间的三种关系&lt;/p&gt;
@@ -771,7 +1032,7 @@ inverse 取值为 &lt;code&gt;true&lt;/code&gt; ，代表放弃了外键维护�
             <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
             <pubDate>Wed, 04 Nov 2020 19:49:02 +0800</pubDate>
             <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以下为个人学习笔记和习题整理&lt;/p&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
 &lt;h2 id=&#34;query对象-查询数据库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#query对象-查询数据库&#34;&gt;#&lt;/a&gt; Query 对象 查询数据库&lt;/h2&gt;
@@ -880,7 +1141,7 @@ setBoolean (参数名，参数值)&lt;br /&gt;
             <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
             <pubDate>Wed, 04 Nov 2020 15:13:39 +0800</pubDate>
             <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以下为个人学习笔记和习题整理&lt;/p&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
 &lt;h2 id=&#34;主键生成策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主键生成策略&#34;&gt;#&lt;/a&gt; 主键生成策略&lt;/h2&gt;
@@ -1045,7 +1306,7 @@ Java 程序要生成主键值，Hibernate 不生成主键值。（默认方式�
             <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
             <pubDate>Wed, 28 Oct 2020 17:37:23 +0800</pubDate>
             <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以下为个人学习笔记和习题整理&lt;/p&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
 &lt;h2 id=&#34;hibernate简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hibernate简介&#34;&gt;#&lt;/a&gt; Hibernate 简介&lt;/h2&gt;
@@ -2242,7 +2503,7 @@ b. 聚合函数经常与 &lt;code&gt;group by&lt;/code&gt;  分组依据一起�
             <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
             <pubDate>Sun, 25 Oct 2020 21:07:25 +0800</pubDate>
             <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以下为个人学习笔记和习题整理&lt;/p&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
 &lt;h2 id=&#34;oracle-11g-安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#oracle-11g-安装&#34;&gt;#&lt;/a&gt; Oracle 11g 安装&lt;/h2&gt;

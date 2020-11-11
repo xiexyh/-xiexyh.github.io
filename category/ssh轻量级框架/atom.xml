@@ -14,7 +14,7 @@
         <title>第9周 HQL连接查询、Hibernate注解</title>
         <link rel="alternate" href="http://www.xieyihui.top/2020/11/07/computer-science/SSH/week-9/"/>
         <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以下为个人学习笔记和习题整理&lt;/p&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
 &lt;h2 id=&#34;hibernate使用sql语句&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hibernate使用sql语句&#34;&gt;#&lt;/a&gt; Hibernate 使用 SQL 语句&lt;/h2&gt;
@@ -216,7 +216,7 @@
         <title>第8周 配置Hibernate关联映射</title>
         <link rel="alternate" href="http://www.xieyihui.top/2020/11/04/computer-science/SSH/week-8/"/>
         <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以下为个人学习笔记和习题整理&lt;/p&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
 &lt;p&gt;数据库设计中，两个实体之间的三种关系&lt;/p&gt;
@@ -369,7 +369,7 @@ inverse 取值为 &lt;code&gt;true&lt;/code&gt; ，代表放弃了外键维护�
         <title>第7周 HQL查询语言</title>
         <link rel="alternate" href="http://www.xieyihui.top/2020/11/04/computer-science/SSH/week-7/"/>
         <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以下为个人学习笔记和习题整理&lt;/p&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
 &lt;h2 id=&#34;query对象-查询数据库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#query对象-查询数据库&#34;&gt;#&lt;/a&gt; Query 对象 查询数据库&lt;/h2&gt;
@@ -478,7 +478,7 @@ setBoolean (参数名，参数值)&lt;br /&gt;
         <title>第6周 主键生成策略、Java对象的三种状态、Hibernate缓存、脏检查</title>
         <link rel="alternate" href="http://www.xieyihui.top/2020/11/04/computer-science/SSH/week-6/"/>
         <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以下为个人学习笔记和习题整理&lt;/p&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
 &lt;h2 id=&#34;主键生成策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主键生成策略&#34;&gt;#&lt;/a&gt; 主键生成策略&lt;/h2&gt;
@@ -643,7 +643,7 @@ Java 程序要生成主键值，Hibernate 不生成主键值。（默认方式�
         <title>第5周 SSH入门</title>
         <link rel="alternate" href="http://www.xieyihui.top/2020/10/28/computer-science/SSH/week-5/"/>
         <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以下为个人学习笔记和习题整理&lt;/p&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
 &lt;h2 id=&#34;hibernate简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hibernate简介&#34;&gt;#&lt;/a&gt; Hibernate 简介&lt;/h2&gt;
@@ -1840,7 +1840,7 @@ b. 聚合函数经常与 &lt;code&gt;group by&lt;/code&gt;  分组依据一起�
         <title>第1周 Oracle数据类型、约束、ROWNUM实现分页查询</title>
         <link rel="alternate" href="http://www.xieyihui.top/2020/10/25/computer-science/SSH/week-1/"/>
         <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
-&lt;p&gt;以下为个人学习笔记和习题整理&lt;/p&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
 &lt;h2 id=&#34;oracle-11g-安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#oracle-11g-安装&#34;&gt;#&lt;/a&gt; Oracle 11g 安装&lt;/h2&gt;
