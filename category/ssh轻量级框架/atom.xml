@@ -209,6 +209,7 @@
         <category term="SSH轻量级框架" scheme="http://www.xieyihui.top/categories/computer-science/SSH/" />
         <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
         <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
+        <category term="Hibernate" scheme="http://www.xieyihui.top/tags/Hibernate/" />
         <updated>2020-11-07T07:23:43.000Z</updated>
     </entry>
     <entry>
@@ -362,6 +363,7 @@ inverse 取值为 &lt;code&gt;true&lt;/code&gt; ，代表放弃了外键维护�
         <category term="SSH轻量级框架" scheme="http://www.xieyihui.top/categories/computer-science/SSH/" />
         <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
         <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
+        <category term="Hibernate" scheme="http://www.xieyihui.top/tags/Hibernate/" />
         <updated>2020-11-04T13:05:18.000Z</updated>
     </entry>
     <entry>
@@ -471,6 +473,7 @@ setBoolean (参数名，参数值)&lt;br /&gt;
         <category term="SSH轻量级框架" scheme="http://www.xieyihui.top/categories/computer-science/SSH/" />
         <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
         <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
+        <category term="Hibernate" scheme="http://www.xieyihui.top/tags/Hibernate/" />
         <updated>2020-11-04T11:49:02.000Z</updated>
     </entry>
     <entry>
@@ -636,6 +639,7 @@ Java 程序要生成主键值，Hibernate 不生成主键值。（默认方式�
         <category term="SSH轻量级框架" scheme="http://www.xieyihui.top/categories/computer-science/SSH/" />
         <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
         <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
+        <category term="Hibernate" scheme="http://www.xieyihui.top/tags/Hibernate/" />
         <updated>2020-11-04T07:13:39.000Z</updated>
     </entry>
     <entry>
@@ -795,6 +799,7 @@ delete 的第（5）部分代码如下：&lt;br /&gt;
         <category term="SSH轻量级框架" scheme="http://www.xieyihui.top/categories/computer-science/SSH/" />
         <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
         <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
+        <category term="Hibernate" scheme="http://www.xieyihui.top/tags/Hibernate/" />
         <updated>2020-10-28T09:37:23.000Z</updated>
     </entry>
     <entry>
@@ -864,7 +869,7 @@ b. 有多个业务系统&lt;br /&gt;
 &lt;li&gt;&lt;strong&gt;创建用户&lt;/strong&gt;&lt;br /&gt;
 &lt;strong&gt;命令格式：&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;Create&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;User&lt;/span&gt; 用户名&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;IDENTIFIED &lt;span class=&#34;token keyword&#34;&gt;BY&lt;/span&gt; 密码                   &lt;span class=&#34;token comment&#34;&gt;--- 密码区分大小写&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;Default&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;Tablespace&lt;/span&gt; 用户的表空间		&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;Temporary&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;Tablespace&lt;/span&gt; 临时表空间&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;create&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;User&lt;/span&gt; 用户名&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;IDENTIFIED &lt;span class=&#34;token keyword&#34;&gt;BY&lt;/span&gt; 密码                   &lt;span class=&#34;token comment&#34;&gt;--- 密码区分大小写&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;Default&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;Tablespace&lt;/span&gt; 用户的表空间		&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;Temporary&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;Tablespace&lt;/span&gt; 临时表空间&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;查看用户是否存在&lt;/strong&gt;&lt;br /&gt;
 &lt;strong&gt;命令格式：&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -872,7 +877,7 @@ b. 有多个业务系统&lt;br /&gt;
 &lt;li&gt;&lt;strong&gt;删除用户&lt;/strong&gt;&lt;br /&gt;
 &lt;strong&gt;命令格式：&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;Drop&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;User&lt;/span&gt; 用户名 &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;CASCADE&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;token comment&#34;&gt;--- 删除用户&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  						   &lt;span class=&#34;token comment&#34;&gt;---cascade，级联删除用户的模式对象&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;用户的常用命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用户的常用命令&#34;&gt;#&lt;/a&gt; 用户的常用命令&lt;/h3&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;drop&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;User&lt;/span&gt; 用户名 &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;CASCADE&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;token comment&#34;&gt;--- 删除用户&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  						   &lt;span class=&#34;token comment&#34;&gt;---cascade，级联删除用户的模式对象&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;用户的常用命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用户的常用命令&#34;&gt;#&lt;/a&gt; 用户的常用命令&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;查看某用户是否存在&lt;/strong&gt;&lt;br /&gt;
 &lt;strong&gt;命令格式：&lt;/strong&gt;&lt;/li&gt;
@@ -1190,6 +1195,7 @@ Oracle 中预定义的角色： &lt;code&gt;Connect&lt;/code&gt;  角色、 &lt;
         <category term="SSH轻量级框架" scheme="http://www.xieyihui.top/categories/computer-science/SSH/" />
         <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
         <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
+        <category term="Oracle" scheme="http://www.xieyihui.top/tags/Oracle/" />
         <updated>2020-10-28T01:53:49.000Z</updated>
     </entry>
     <entry>
@@ -1236,7 +1242,7 @@ Oracle 中预定义的角色： &lt;code&gt;Connect&lt;/code&gt;  角色、 &lt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;Select&lt;/span&gt; 字段清单&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;表名&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;字段名&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; …&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;From&lt;/span&gt; 表A&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;inner&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;join&lt;/span&gt; 表B						&lt;span class=&#34;token comment&#34;&gt;-- 连接方式：inner join 交集&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;on&lt;/span&gt; 表A&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;共有字段&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;表B&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;共有字段		&lt;span class=&#34;token comment&#34;&gt;-- 连接条件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; 字段清单&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;表名&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;字段名&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; …&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;From&lt;/span&gt; 表A&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;inner&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;join&lt;/span&gt; 表B						&lt;span class=&#34;token comment&#34;&gt;-- 连接方式：inner join 交集&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;on&lt;/span&gt; 表A&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;共有字段&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;表B&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;共有字段		&lt;span class=&#34;token comment&#34;&gt;-- 连接条件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;inner join 查询的步骤&lt;/strong&gt;&lt;br /&gt;
  1. 列出要查的字段清单，以 表名。字段名 的形式列在 Select 后面。&lt;br /&gt;
 2. 数一数两张表种，哪张表要查的字段更多，出字段多的表，放在 from 后面；出字段少的表，放在 inner join 后面。&lt;br /&gt;
@@ -1250,7 +1256,7 @@ Oracle 中预定义的角色： &lt;code&gt;Connect&lt;/code&gt;  角色、 &lt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;命令格式：&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;Select&lt;/span&gt;  字段清单&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;表名&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;字段名&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; …&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;From&lt;/span&gt; 表A&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;left&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;join&lt;/span&gt; 表B						&lt;span class=&#34;token comment&#34;&gt;-- 连接方式 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;on&lt;/span&gt; 表A&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;共有字段&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;表B&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;共有字段			&lt;span class=&#34;token comment&#34;&gt;-- 连接条件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt;  字段清单&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;表名&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;字段名&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; …&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;From&lt;/span&gt; 表A&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;left&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;join&lt;/span&gt; 表B						&lt;span class=&#34;token comment&#34;&gt;-- 连接方式 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;on&lt;/span&gt; 表A&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;共有字段&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;表B&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;共有字段			&lt;span class=&#34;token comment&#34;&gt;-- 连接条件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Left join 查询的步骤&lt;/strong&gt;&lt;br /&gt;
  1. 列出要查的字段清单，以 表名。字段名 的形式列在 Select 后面。&lt;br /&gt;
 2. 观察两张表中，哪一张需要显示所有记录，要显示所有记录的表，放在 from 后面。另一张表放在 left join 后面。&lt;br /&gt;
@@ -1385,6 +1391,7 @@ b. 聚合函数经常与 &lt;code&gt;group by&lt;/code&gt;  分组依据一起�
         <category term="SSH轻量级框架" scheme="http://www.xieyihui.top/categories/computer-science/SSH/" />
         <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
         <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
+        <category term="Oracle" scheme="http://www.xieyihui.top/tags/Oracle/" />
         <updated>2020-10-27T14:56:03.000Z</updated>
     </entry>
     <entry>
@@ -1833,6 +1840,7 @@ b. 聚合函数经常与 &lt;code&gt;group by&lt;/code&gt;  分组依据一起�
         <category term="SSH轻量级框架" scheme="http://www.xieyihui.top/categories/computer-science/SSH/" />
         <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
         <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
+        <category term="Oracle" scheme="http://www.xieyihui.top/tags/Oracle/" />
         <updated>2020-10-25T13:37:29.000Z</updated>
     </entry>
     <entry>
@@ -1994,6 +2002,7 @@ ROWID 只能 &lt;code&gt;查询&lt;/code&gt; ，不能 &lt;code&gt;修改&lt;/co
         <category term="SSH轻量级框架" scheme="http://www.xieyihui.top/categories/computer-science/SSH/" />
         <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
         <category term="SSH" scheme="http://www.xieyihui.top/tags/SSH/" />
+        <category term="Oracle" scheme="http://www.xieyihui.top/tags/Oracle/" />
         <updated>2020-10-25T13:07:25.000Z</updated>
     </entry>
 </feed>

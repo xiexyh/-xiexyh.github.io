@@ -1,19 +1,27 @@
 <?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://www.xieyihui.top</id>
-    <title>XYH</title>
-    <subtitle></subtitle>
-    <icon>http://www.xieyihui.top/images/favicon.ico</icon>
-    <link href="http://www.xieyihui.top" />
-    <author>
-      <name>XYH</name>
-    </author>
-    <updated>2020-11-12T05:32:33.000Z</updated>
-    <entry>
-        <id>http://www.xieyihui.top/2020/11/12/computer-science/Project-training/SQLserver/</id>
-        <title>书店管理数据库的设计与实现</title>
-        <link rel="alternate" href="http://www.xieyihui.top/2020/11/12/computer-science/Project-training/SQLserver/"/>
-        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
+<rss version="2.0">
+    <channel>
+        <title>XYH</title>
+        <subtitle></subtitle>
+        <icon>http://www.xieyihui.top/images/favicon.ico</icon>
+        <link>http://www.xieyihui.top</link>
+        <author>
+          <name>XYH</name>
+        </author>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Thu, 12 Nov 2020 13:32:33 +0800</pubDate>
+        <lastBuildDate>Thu, 12 Nov 2020 13:32:33 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://www.xieyihui.top/2020/11/12/computer-science/Project-training/SQLserver/</guid>
+            <title>书店管理数据库的设计与实现</title>
+            <link>http://www.xieyihui.top/2020/11/12/computer-science/Project-training/SQLserver/</link>
+            <category term="计算机科学" scheme="http://www.xieyihui.top/categories/computer-science/" />
+            <category term="项目实训" scheme="http://www.xieyihui.top/categories/computer-science/Project-training/" />
+            <category term="SQLServer" scheme="http://www.xieyihui.top/tags/SQLServer/" />
+            <category term="项目实训" scheme="http://www.xieyihui.top/tags/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%AE%AD/" />
+            <pubDate>Thu, 12 Nov 2020 13:32:33 +0800</pubDate>
+            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;以下为个人学习笔记&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;实训笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#实训笔记&#34;&gt;#&lt;/a&gt; 实训笔记&lt;/h1&gt;
@@ -739,11 +747,7 @@ E-R 图向关系模型的转换规则是：&lt;br /&gt;
 &lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;backup&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;database&lt;/span&gt; 书店管理数据库 &lt;span class=&#34;token keyword&#34;&gt;to&lt;/span&gt; 书店管理数据库备份&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/project-training_picture/1.70.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;drop&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;database&lt;/span&gt; 书店管理数据库&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;go&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;restore&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;database&lt;/span&gt; 书店管理数据库 &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; 书店管理数据库备份 &lt;span class=&#34;token keyword&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;6&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/project-training_picture/1.71.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 至此，该项目实训已经圆满啦&lt;/p&gt;
-</content>
-        <category term="计算机科学" scheme="http://www.xieyihui.top/categories/computer-science/" />
-        <category term="项目实训" scheme="http://www.xieyihui.top/categories/computer-science/Project-training/" />
-        <category term="SQL" scheme="http://www.xieyihui.top/tags/SQL/" />
-        <category term="项目实训" scheme="http://www.xieyihui.top/tags/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%AE%AD/" />
-        <updated>2020-11-12T05:32:33.000Z</updated>
-    </entry>
-</feed>
+ ]]></description>
+        </item>
+    </channel>
+</rss>

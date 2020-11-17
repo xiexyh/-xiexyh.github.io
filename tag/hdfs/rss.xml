@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>XYH</title>
+        <subtitle></subtitle>
+        <icon>http://www.xieyihui.top/images/favicon.ico</icon>
+        <link>http://www.xieyihui.top</link>
+        <author>
+          <name>XYH</name>
+        </author>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 11 Nov 2020 16:46:58 +0800</pubDate>
+        <lastBuildDate>Wed, 11 Nov 2020 16:46:58 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://www.xieyihui.top/2020/11/11/computer-science/Big-data/week-2/</guid>
+            <title>第2周 HDFS文件系统常用操作命令</title>
+            <link>http://www.xieyihui.top/2020/11/11/computer-science/Big-data/week-2/</link>
+            <category term="计算机科学" scheme="http://www.xieyihui.top/categories/computer-science/" />
+            <category term="大数据技术原理与应用" scheme="http://www.xieyihui.top/categories/computer-science/Big-data/" />
+            <category term="大数据" scheme="http://www.xieyihui.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" />
+            <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+            <category term="HDFS" scheme="http://www.xieyihui.top/tags/HDFS/" />
+            <pubDate>Wed, 11 Nov 2020 16:46:58 +0800</pubDate>
+            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;以下为个人学习笔记&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
+&lt;h2 id=&#34;检查环境hadoop集群环境&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检查环境hadoop集群环境&#34;&gt;#&lt;/a&gt; 检查环境 hadoop 集群环境&lt;/h2&gt;
+&lt;p&gt;hadoop1 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.11.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ hadoop2 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.12.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ hadoop3 运行 &lt;code&gt;jps&lt;/code&gt;  命令的截图&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/1.13.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;hdfs基础命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hdfs基础命令&#34;&gt;#&lt;/a&gt; HDFS 基础命令&lt;/h2&gt;
+&lt;h3 id=&#34;-mkdir命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#-mkdir命令&#34;&gt;#&lt;/a&gt; -mkdir 命令&lt;/h3&gt;
+&lt;p&gt;功能：在 hdfs 上创建文件夹&lt;br /&gt;
+操作：在 hdfs 上创建名为 test1 的文件夹&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -mkdir /test1&lt;/code&gt; &lt;br /&gt;
+ 操作执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;-ls命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#-ls命令&#34;&gt;#&lt;/a&gt; -ls 命令&lt;/h3&gt;
+&lt;p&gt;功能：显示目录信息&lt;br /&gt;
+操作：显示 hdfs 根目录的信息&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -ls /&lt;/code&gt; &lt;br /&gt;
+ 操作执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;-rm命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#-rm命令&#34;&gt;#&lt;/a&gt; -rm 命令&lt;/h3&gt;
+&lt;p&gt;功能：删除文件或文件夹&lt;br /&gt;
+注意：如果删除的文件夹下面还有文件就必须先把子文件删除，否则删除不成功&lt;br /&gt;
+操作：删除根目录下的 test1 文件夹&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -rm -r /test1&lt;/code&gt; &lt;br /&gt;
+ 操作执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;-mv命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#-mv命令&#34;&gt;#&lt;/a&gt; -mv 命令&lt;/h3&gt;
+&lt;p&gt;功能：在 hdfs 目录中移动文件或重命名文件&lt;br /&gt;
+操作 1：创建 stu1、stu2 文件夹，并查看创建好的文件夹&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -mkdir /stu1&lt;/code&gt; &lt;br /&gt;
+ 在终端执行命令： &lt;code&gt;hdfs dfs -mkdir /stu2&lt;/code&gt; &lt;br /&gt;
+ 在终端执行命令： &lt;code&gt;hdfs dfs -ls /&lt;/code&gt; &lt;br /&gt;
+ 操作 1 执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.4.1.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+操作 2：在 stu1 中创建一个名为 q.txt 的文件夹并查看 stu1 的文件信息&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -mkdir /stu1/q.txt&lt;/code&gt; &lt;br /&gt;
+ 在终端执行命令： &lt;code&gt;hdfs dfs -ls /stu1&lt;/code&gt; &lt;br /&gt;
+ 操作 2 执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.4.2.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+操作 3：将 stu1 文件夹中的 q.txt 文件夹移动到 stu2 文件夹下，执行后查看 stu1 和 stu2 文件夹下的内容&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -mv /stu1/q.txt /stu2&lt;/code&gt; &lt;br /&gt;
+ 在终端执行命令： &lt;code&gt;hdfs dfs -ls /stu1&lt;/code&gt; &lt;br /&gt;
+ 在终端执行命令： &lt;code&gt;hdfs dfs -ls /stu2&lt;/code&gt; &lt;br /&gt;
+ 操作 3 执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.4.3.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+操作 4：将 stu2 下的 q.txt 文件夹重命名为 qqq.txt，执行后查看 stu2 文件夹下的文件信息验证是否重命名成功&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -mv /stu2/q.txt /stu2/qqq.txt&lt;/code&gt; &lt;br /&gt;
+ 在终端执行命令： &lt;code&gt;hdfs dfs -ls /stu2&lt;/code&gt; &lt;br /&gt;
+ 操作 4 执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.4.4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;-cp命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#-cp命令&#34;&gt;#&lt;/a&gt; -cp 命令&lt;/h3&gt;
+&lt;p&gt;功能：从 hdfs 的一个路径复制 hdfs 的另一个路径&lt;br /&gt;
+操作：将 stu2 文件夹中的 qqq.txt 文件夹复制到 hdfs 根目录下，并查看根目录下是否有 qqq.txt 文件夹&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -cp /stu2/qqq.txt /&lt;/code&gt; &lt;br /&gt;
+ 在终端执行命令： &lt;code&gt;hdfs dfs -ls /&lt;/code&gt; &lt;br /&gt;
+ 操作执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;-get命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#-get命令&#34;&gt;#&lt;/a&gt; -get 命令&lt;/h3&gt;
+&lt;p&gt;功能：从 hdfs 复制到本地&lt;br /&gt;
+操作：将 hdfs 上 stu2 文件夹下的 qqq.txt 文件夹复制到 hadoop1 本地的 /opt 目录下，并进入 /opt 下查看是否复制成功&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -get /stu2/qqq.txt /opt&lt;/code&gt; &lt;br /&gt;
+ 在终端执行命令： &lt;code&gt;cd /opt/&lt;/code&gt; &lt;br /&gt;
+ 在终端执行命令： &lt;code&gt;ls&lt;/code&gt; &lt;br /&gt;
+ 操作执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.6.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;-put命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#-put命令&#34;&gt;#&lt;/a&gt; -put 命令&lt;/h3&gt;
+&lt;p&gt;功能：从本地文件系统中复制文件到 hdfs 文件系统中&lt;br /&gt;
+操作 1：将本地文件系统中 /root 目录下的 iris.data 文件复制到 hdfs 的 stu1 文件夹下，并查看是否复制成功&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -put /root/iris.data /stu1&lt;/code&gt; &lt;br /&gt;
+ 操作 1 执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.7.1.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -ls /stu1&lt;/code&gt; &lt;br /&gt;
+ 操作 2 执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.7.2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;-df命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#-df命令&#34;&gt;#&lt;/a&gt; -df 命令&lt;/h3&gt;
+&lt;p&gt;功能：统计文件系统的可用空间信息&lt;br /&gt;
+操作 1：统计 hdfs 文件系统的可用信息&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -df -h /&lt;/code&gt; &lt;br /&gt;
+ 操作 1 执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;-du命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#-du命令&#34;&gt;#&lt;/a&gt; -du 命令&lt;/h3&gt;
+&lt;p&gt;功能：统计一个指定目录下的文件节点数量&lt;br /&gt;
+操作 1：统计 hdfs 文件系统中 stu1 文件夹下的文件节点数量&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -du /stu1&lt;/code&gt; &lt;br /&gt;
+ 操作 1 执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;-help查看帮助命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#-help查看帮助命令&#34;&gt;#&lt;/a&gt; -help 查看帮助命令&lt;/h3&gt;
+&lt;p&gt;功能：输出这个命令的参数&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -help/&lt;/code&gt; &lt;br /&gt;
+ 操作执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.10.1.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+在终端执行命令：hdfs dfs -usage/&lt;br /&gt;
+ 操作执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.10.2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;文件权限管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件权限管理&#34;&gt;#&lt;/a&gt; 文件权限管理&lt;/h3&gt;
+&lt;p&gt;功能：文件权限管理&lt;br /&gt;
+操作：将 stu1 文件夹下的 iris.data 文件权限修改为 777，并查看修改结果&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -chmod 777 /stu1/iris.data&lt;/code&gt; &lt;br /&gt;
+ 在终端执行命令： &lt;code&gt;hdfs dfs -ls /&lt;/code&gt; &lt;br /&gt;
+ 操作执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.11.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;查看具体文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查看具体文件&#34;&gt;#&lt;/a&gt; 查看具体文件&lt;/h3&gt;
+&lt;p&gt;功能：查看文件内容&lt;br /&gt;
+操作：查看 stu1 文件夹下的 iris.data 文件的内容&lt;br /&gt;
+在终端执行命令： &lt;code&gt;hdfs dfs -cat /stu1/iris.data&lt;/code&gt; &lt;br /&gt;
+ 操作执行截图：&lt;br /&gt;
+&lt;img data-src=&#34;https://picture-1303140728.cos.ap-guangzhou.myqcloud.com/blog_picture/big-data_picture/2.12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
