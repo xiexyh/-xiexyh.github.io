@@ -302,9 +302,9 @@
 </content>
         <category term="计算机科学" scheme="http://www.xieyihui.top/categories/computer-science/" />
         <category term="SSM轻量级框架" scheme="http://www.xieyihui.top/categories/computer-science/SSM/" />
-        <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
         <category term="SSM" scheme="http://www.xieyihui.top/tags/SSM/" />
         <category term="MyBatis" scheme="http://www.xieyihui.top/tags/MyBatis/" />
+        <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
         <updated>2020-11-17T13:13:05.000Z</updated>
     </entry>
 </feed>
