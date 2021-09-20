@@ -85,8 +85,8 @@
 </content>
         <category term="计算机科学" scheme="http://www.xieyihui.top/categories/computer-science/" />
         <category term="大数据技术原理与应用" scheme="http://www.xieyihui.top/categories/computer-science/Big-data/" />
-        <category term="大数据" scheme="http://www.xieyihui.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" />
         <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+        <category term="大数据" scheme="http://www.xieyihui.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" />
         <category term="Zookeeper" scheme="http://www.xieyihui.top/tags/Zookeeper/" />
         <updated>2020-11-11T12:23:38.000Z</updated>
     </entry>
@@ -170,8 +170,8 @@
 </content>
         <category term="计算机科学" scheme="http://www.xieyihui.top/categories/computer-science/" />
         <category term="大数据技术原理与应用" scheme="http://www.xieyihui.top/categories/computer-science/Big-data/" />
-        <category term="大数据" scheme="http://www.xieyihui.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" />
         <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+        <category term="大数据" scheme="http://www.xieyihui.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" />
         <category term="教程" scheme="http://www.xieyihui.top/tags/%E6%95%99%E7%A8%8B/" />
         <category term="Zookeeper" scheme="http://www.xieyihui.top/tags/Zookeeper/" />
         <updated>2020-11-11T09:30:40.000Z</updated>

@@ -128,8 +128,8 @@
 </content>
         <category term="计算机科学" scheme="http://www.xieyihui.top/categories/computer-science/" />
         <category term="大数据技术原理与应用" scheme="http://www.xieyihui.top/categories/computer-science/Big-data/" />
-        <category term="大数据" scheme="http://www.xieyihui.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" />
         <category term="学习笔记" scheme="http://www.xieyihui.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+        <category term="大数据" scheme="http://www.xieyihui.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" />
         <category term="HDFS" scheme="http://www.xieyihui.top/tags/HDFS/" />
         <updated>2020-11-11T08:46:58.000Z</updated>
     </entry>
